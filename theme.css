@@ -8,7 +8,9 @@ github: https://github.com/oixel/obsidian-bonno
 -------------------- */
 
 /* 
-	Navigation
+	--------------
+	| Navigation |
+	--------------
 */
 
 /* Highlight active file with accent color */
@@ -22,4 +24,41 @@ github: https://github.com/oixel/obsidian-bonno
 .tree-item-self.is-being-renamed:focus-within {
 	--nav-item-color-active: var(--text-normal);
 	background-color: transparent;
+}
+
+/* 
+	----------------
+	| Misc. Tweaks |
+	----------------
+*/
+
+/* 
+	## List Elements
+*/
+
+/* Secondary bullet is a hollowed circle */
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet:after {
+	height: 4px;
+	width: 4px;
+	background-color: transparent;
+	border-style: solid;
+	border-radius: 50%;
+	border-width: 1px;
+}
+
+/* Tertiary bullet is a square */
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet:after {
+	height: 5px;
+	width: 5px;
+	border-radius: 0%;
+}
+
+/* Quaternary bullet is a hollowed square */
+.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .list-bullet:after {
+	height: 4px;
+	width: 4px;
+	background-color: transparent;
+	border-style: solid;
+	border-radius: 0%;
+	border-width: 1px;
 }
