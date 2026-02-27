@@ -2,6 +2,8 @@
 
 *A custom theme for Obsidian with a focus on tiny, personal preferences.*
 
+_NOTE:_ While I have left the accent color to be customizable, my personal recommendation is #F5C35A!
+
 ## Changes
 
 ### Fonts
