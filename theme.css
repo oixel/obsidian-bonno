@@ -13,6 +13,11 @@ github: https://github.com/oixel/obsidian-bonno
 	--------------
 */
 
+.theme-dark {
+	--background-primary: rgb(32, 32, 30);
+	--background-secondary: rgb(41, 40, 39);
+}
+
 /* 
 	---------
 	| Fonts |
