@@ -108,6 +108,24 @@ body {
 */
 
 /* 
+	## Caret & Cursor
+*/
+
+/* Ensure that the caret is visible regardless of background color */
+body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,
+body .markdown-source-view.mod-cm6 .cm-content,
+body.fancy-cursor .mod-cm6 .cm-line {
+	caret-color: auto;
+}
+
+
+/* Add a small border to the VIM cursor to make it visible in highlight blocks */
+.cm-fat-cursor,
+.CodeMirror-cursor {
+	border: 1px var(--background-primary) solid !important;
+}
+
+/* 
 	## List Elements
 */
 
@@ -144,7 +162,7 @@ body {
 }
 
 /* 
-	## Internal Lins
+	## Internal Links F5C35A
 */
 
 /* Remove link underline from resolved internal note-to-note links */
@@ -188,6 +206,3 @@ mark>a:not(.is-unresolved) {
 	text-decoration: underline !important;
 	text-underline-offset: 1.5px;
 }
-
-/* TODO: Inverse cursor on highlight */
-/* TODO: Add border to VIM cursor on highlight */
