@@ -111,8 +111,11 @@ body {
 	## List Elements
 */
 
+/* NOTE: first selection is for edit mode, second is for read mode */
+
 /* Secondary bullet is a hollowed circle */
-.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet:after {
+.HyperMD-list-line-2 .list-bullet:after,
+[data-line="1"]>.list-bullet:after {
 	height: 4px;
 	width: 4px;
 	background-color: transparent;
@@ -122,14 +125,16 @@ body {
 }
 
 /* Tertiary bullet is a square */
-.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet:after {
+.HyperMD-list-line-3 .list-bullet:after,
+[data-line="2"]>.list-bullet:after {
 	height: 5px;
 	width: 5px;
 	border-radius: 0%;
 }
 
 /* Quaternary bullet is a hollowed square */
-.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .list-bullet:after {
+.HyperMD-list-line-4 .list-bullet:after,
+[data-line="3"]>.list-bullet:after {
 	height: 4px;
 	width: 4px;
 	background-color: transparent;
