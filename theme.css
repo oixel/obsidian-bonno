@@ -144,11 +144,46 @@ body {
 }
 
 /* 
-	## Internal Embeds
+	## Internal Lins
 */
 
-/* Remove link underline from internal note-to-note embeds */
+/* Remove link underline from resolved internal note-to-note links */
 :root body {
 	--link-decoration: none;
 	--link-decoration-hover: none;
 }
+
+/* Add dotted line under unresolved internal links */
+.is-unresolved {
+	text-decoration: underline dashed !important;
+}
+
+/* 
+	## Highlighting
+*/
+
+/* Make highlights solid accent color */
+.cm-highlight,
+mark {
+	background: var(--interactive-accent) !important;
+}
+
+/* Ensure that text in a highlight gets text-on-accent to avoid visibility issues */
+.cm-highlight,
+.cm-highlight.cm-hmd-internal-link>.is-unresolved>span,
+.cm-highlight.cm-hmd-internal-link>.is-unresolved,
+mark,
+mark>a {
+	color: var(--text-on-accent) !important;
+}
+
+/* Re-add regular underline to resolved internal links (to make them stand out from regular highlighted text) */
+.cm-highlight.cm-hmd-internal-link>:not(.is-unresolved),
+mark>a:not(.is-unresolved) {
+	text-decoration: underline !important;
+	text-underline-offset: 1.5px;
+}
+
+/* TODO: Add horizontal padding to highlight */
+/* TODO: Inverse cursor on highlight */
+/* TODO: Add border to VIM cursor on highlight */
