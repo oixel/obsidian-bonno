@@ -115,7 +115,7 @@ body {
 
 /* Secondary bullet is a hollowed circle */
 .HyperMD-list-line-2 .list-bullet:after,
-[data-line="1"]>.list-bullet:after {
+.el-ul>ul>li>ul>li>.list-bullet:after {
 	height: 4px;
 	width: 4px;
 	background-color: transparent;
@@ -126,7 +126,7 @@ body {
 
 /* Tertiary bullet is a square */
 .HyperMD-list-line-3 .list-bullet:after,
-[data-line="2"]>.list-bullet:after {
+.el-ul>ul>li>ul>li>ul>li>.list-bullet:after {
 	height: 5px;
 	width: 5px;
 	border-radius: 0%;
@@ -134,7 +134,7 @@ body {
 
 /* Quaternary bullet is a hollowed square */
 .HyperMD-list-line-4 .list-bullet:after,
-[data-line="3"]>.list-bullet:after {
+.el-ul>ul>li>ul>li>ul>li>ul>li>.list-bullet:after {
 	height: 4px;
 	width: 4px;
 	background-color: transparent;
