@@ -111,7 +111,7 @@ body {
 	## List Elements
 */
 
-/* NOTE: first selection is for edit mode, second is for read mode */
+/* NOTE: first selection is for edit mode, second is for READ view */
 
 /* Secondary bullet is a hollowed circle */
 .HyperMD-list-line-2 .list-bullet:after,
@@ -162,6 +162,11 @@ body {
 	## Highlighting
 */
 
+/* Add horizontal padding to highlight when in READ view */
+mark {
+	padding: 0 4px;
+}
+
 /* Make highlights solid accent color */
 .cm-highlight,
 mark {
@@ -184,6 +189,5 @@ mark>a:not(.is-unresolved) {
 	text-underline-offset: 1.5px;
 }
 
-/* TODO: Add horizontal padding to highlight */
 /* TODO: Inverse cursor on highlight */
 /* TODO: Add border to VIM cursor on highlight */
