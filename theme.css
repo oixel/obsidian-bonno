@@ -171,7 +171,7 @@ body.fancy-cursor .mod-cm6 .cm-line {
 	--link-decoration-hover: none;
 }
 
-/* Add dotted line under unresolved internal links */
+/* Add dashed line under unresolved internal links */
 .is-unresolved {
 	text-decoration: underline dashed !important;
 }

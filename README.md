@@ -28,3 +28,6 @@ _NOTE:_ While I have left the accent color to be customizable, my personal recom
   - 4: Hollowed square
 
 - Internal links between notes no longer have an underline.
+- Unresolved links have a dashed underline
+
+- Highlight is solid (full opacity) and matches accent color.
