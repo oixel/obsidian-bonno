@@ -206,3 +206,21 @@ mark>a:not(.is-unresolved) {
 	text-decoration: underline !important;
 	text-underline-offset: 1.5px;
 }
+
+/* 
+	## Code Blocks
+*/
+
+/* Make code block background a bit lighter so it can be seen better against regular background */
+code,
+.cm-inline-code,
+.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
+pre {
+	background-color: #313131 !important;
+}
+
+/* Add small white border around code blocks in READ view for additional styling */
+pre,
+code:not(pre>code) {
+	border: 0.5px white solid !important;
+}
