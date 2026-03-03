@@ -31,3 +31,5 @@ _NOTE:_ While I have left the accent color to be customizable, my personal recom
 - Unresolved links have a dashed underline
 
 - Highlight is solid (full opacity) and matches accent color.
+
+- Code blocks have a slightly lighter background color and a small white border in READ view
