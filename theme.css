@@ -8,14 +8,31 @@ github: https://github.com/oixel/obsidian-bonno
 -------------------- */
 
 /* 
-	--------------
-	| Background |
-	--------------
+	-------------------------
+	| Variable Declarations |
+	-------------------------
 */
 
 .theme-dark {
 	--background-primary: rgb(32, 32, 30);
 	--background-secondary: rgb(41, 40, 39);
+
+	/* --divider-color: rgb(115, 115, 115); */
+
+	--code-block-background: #313131;
+	--code-block-border: white;
+	--code-comment: rgb(150, 150, 150);
+}
+
+.theme-light {
+	/* --background-primary: rgb(247, 235, 216);
+	--background-secondary: rgb(235, 215, 182); */
+
+	/* --divider-color: rgb(209, 198, 179); */
+	--code-block-background: #d8d8d8;
+	--code-block-border: black;
+
+	--ribbon-background-collapsed: var(--background-secondary);
 }
 
 /* 
@@ -81,7 +98,6 @@ body {
 	--font-monospace-theme: "Necto Mono";
 }
 
-
 /* 
 	--------------
 	| Navigation |
@@ -99,6 +115,11 @@ body {
 .tree-item-self.is-being-renamed:focus-within {
 	--nav-item-color-active: var(--text-normal);
 	background-color: transparent;
+}
+
+/* Ensure text remains legible if mouse hovers over text box while renaming */
+.tree-item-self.is-being-renamed:focus-within:hover {
+	--nav-item-color-active: var(--text-on-accent);
 }
 
 /* 
@@ -172,7 +193,8 @@ body.fancy-cursor .mod-cm6 .cm-line {
 }
 
 /* Add dashed line under unresolved internal links */
-.is-unresolved {
+.is-unresolved,
+.markdown-rendered .internal-link.is-unresolved {
 	text-decoration: underline dashed !important;
 }
 
@@ -191,17 +213,24 @@ mark {
 	background: var(--interactive-accent) !important;
 }
 
+/* Ensure that strikethrough matches text color in highlighted text */
+del:has(mark) {
+	color: var(--text-on-accent);
+}
+
 /* Ensure that text in a highlight gets text-on-accent to avoid visibility issues */
 .cm-highlight,
 .cm-highlight.cm-hmd-internal-link>.is-unresolved>span,
 .cm-highlight.cm-hmd-internal-link>.is-unresolved,
 mark,
-mark>a {
+mark>a,
+.markdown-rendered mark .internal-link {
 	color: var(--text-on-accent) !important;
 }
 
 /* Re-add regular underline to resolved internal links (to make them stand out from regular highlighted text) */
 .cm-highlight.cm-hmd-internal-link>:not(.is-unresolved),
+.markdown-rendered mark .internal-link,
 mark>a:not(.is-unresolved) {
 	text-decoration: underline !important;
 	text-underline-offset: 1.5px;
@@ -216,11 +245,11 @@ code,
 .cm-inline-code,
 .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
 pre {
-	background-color: #313131 !important;
+	background-color: var(--code-block-background) !important;
 }
 
 /* Add small white border around code blocks in READ view for additional styling */
 pre,
 code:not(pre>code) {
-	border: 0.5px white solid !important;
+	border: 0.5px var(--code-block-border) solid !important;
 }
