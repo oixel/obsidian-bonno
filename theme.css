@@ -14,14 +14,16 @@ github: https://github.com/oixel/obsidian-bonno
 */
 
 .theme-dark {
-	--background-primary: rgb(32, 32, 30);
-	--background-secondary: rgb(41, 40, 39);
+	--background-primary: #20201E;
+	--background-secondary: #292827;
 
-	/* --divider-color: rgb(115, 115, 115); */
+	--divider-color: #313131;
 
 	--code-block-background: #313131;
-	--code-block-border: white;
-	--code-comment: rgb(150, 150, 150);
+	--code-block-border: #DADADA;
+	--code-comment: #969696;
+
+	--text-on-accent: #292827 !important;
 }
 
 .theme-light {
